@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="alltours Anmeldeseite" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>alltours - Anmeldeseite</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-692d4e8b252912ee008d933d5bc3a8d3.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32-89f820f78c43b679a5f8d7b7f48f2e01.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16-3ad84af6e520c69d48e63d1d3a853ae4.png" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <p>Gewinnen Sie einen 1-wöchigen <br> Hotelaufenthalt auf Mallorca*</p>
+        </div>
+        <img class="logo" src="images/alltours-logo.png" alt="alltours Logo">
+    </header>
+    <main>
+        <h1>Anmeldung zum alltours Newsletter</h1>
+        <div class="texts">
+            <p>
+                Als Abonnent unseres Newsletters sind Sie mehrfach im Vorteil: Wir informieren Sie rechtzeitig, wenn es
+                besondere Aktionen und Neugigkeiten gibt, Sie profitieren von Sonderaktionen, Rabatten und
+                Last-Minute-Angeboten. Wir halten Sie auf dem Laufenden.
+            </p>
+        </div>
+        <div class="inner">
+            <p>Lassen Sie sich von unseren exklusiven Angeboten inspirieren!</p>
+            <ul class="lists">
+                <p>Ihre Newsletter Vorteile auf einen Blick:</p>
+                <li><img src="images/hacken.png" alt="Hacken">
+                    Inspirationen für die nächste Reise</li>
+                <li><img src="images/hacken.png" alt="Hacken">Kein Angebot mehr verpassen</li>
+                <li><img src="images/hacken.png" alt="Hacken">Updates für Ihre Reiseplanung</li>
+            </ul>
+            <form id="form" action="post_verify.php" method="POST">
+                <div class="form_group">
+                    <label>E-Mail Adresse*</label>
+                    <input type="email" class="form-control" name="email" placeholder="E-Mail" required>
+                </div>
+
+                <div class="form_group">
+                    <label>Anrede*</label>
+                    <select class="select" name="anrede" required>
+                        <option value=""></option>
+                        <option value="Herr">
+                            Herr
+                        </option>
+                        <option value="Frau">
+                            Frau
+                        </option>
+                        <option value="Divers">
+                            Divers
+                        </option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="form_group">
+                        <label>Vorname*</label>
+                        <input type="text" class="form_name" name="vorname" placeholder="Vorname" required>
+                    </div>
+                    <div class="form_group">
+                        <label>Nachname*</label>
+                        <input type="text" class="form_name" name="nachname" placeholder="Nachname" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form_group">
+                        <label>Geburtsdatum</label>
+                        <input type="date" class="form-control form_name" name="geburtsdatum">
+                    </div>
+                    <div class="inner_row">
+                        <div class="form_group">
+                            <label>PLZ</label>
+                            <input type="text" class="plz" name="plz" pattern="[0-9]{5}">
+                        </div>
+                        <span>*Pflichtfelder</span>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_check">
+                        <input class="form_check-input" type="checkbox" name="checkbox" required>
+                        <label class="form_check-label">Ich habe die Hinweise zum <a
+                                href="https://www.alltours.de/ueber-uns/datenschutz" target="_blank">Datenschutz</a>
+                            gelesen und erkläre mich, auch zur Teilnahme an dem Gewinnspiel, mit der Speicherung,
+                            Weitergabe und Verarbeitung meiner Daten einverstanden. Ich bin damit einverstanden künftig
+                            mit personalisierten Informationen und mit auf meine Interessen abgestimmten Angeboten,
+                            Dienstleistungen und Gewinnspielen rund um das Thema Reise von der alltours
+                            Unternehmensgruppe kontaktiert zu werden. Mir ist bekannt, dass hierfür mein Klickverhalten
+                            (z.B. Öffnung des Newsletters) innerhalb des Newsletters ausgewertet wird, um die relevanten
+                            Werbeangebote auf meine persönlichen Interessen abzustimmen.</label>
+                    </div>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LcOV4AjAAAAAIY68OCQir2lKZlbk3M5Fsv5eTC-"
+                    data-callback="verifyCallback" data-expired-callback="expiredCallback"></div>
+                <p class="warning"></p>
+
+                <div class="form_submit">
+                    <input type="submit" id="submit" name="submit" value="Jetzt Anmelden*">
+                </div>
+            </form>
+            <div id="success_message">
+                <p>Ihre Anmeldung war erfolgreich! <br /> Sie erhalten in Kürze eine Bestätigungsmail.</p>
+            </div>
+        </div>
+        <p style="font-size: 0.8rem;">*Unter allen ab dem 01. März 2023 und bis zum 30. Juni 2023 neu registrierten und
+            bestätigten E-Mailadressen des alltours Newsletters verlost die alltours flugreisen gmbh einen 1-wöchigen
+            Aufenthalt im Hotel Blau Colonia Sant JordiResort auf Mallorca für 2 Personen inkl. Halbpension
+            (Reisezeitraum zwischen dem 25.08. und 18.11.23, auf Anfrage). Flug- und Transferleistungen sind nicht Teil
+            des Gewinns. Änderungen der Hotelunterkunft bleiben vorbehalten.
+            <br /><br />Teilnahmebedingungen: <a
+                href="https://www.alltours.de/service-hilfe/teilnahmebedingungen-gewinnspiele"
+                target="_blank">https://www.alltours.de/service-hilfe/teilnahmebedingungen-gewinnspiele</a>
+            <br />Datenschutzbestimmungen: <a href="https://www.alltours.de/ueber-uns/datenschutz/gewinnspiel"
+                target="_blank">https://www.alltours.de/ueber-uns/datenschutz/gewinnspiel</a>
+        </p>
+    </main>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

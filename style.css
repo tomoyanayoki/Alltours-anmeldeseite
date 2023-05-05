@@ -1,0 +1,302 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --red: #df0313;
+  --grey: #7e8c8d;
+  --background: #f7f7f7;
+  --DarkBlue: #004277;
+  --LightBlue: #00a2d8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--grey);
+  font-family: Ubuntu Regular, -apple-system, blinkmacsystemfont, Segoe UI,
+    roboto, Helvetica Neue, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  border: none;
+  border-radius: none;
+  background: var(--white);
+}
+
+header {
+  width: 100%;
+  height: 650px;
+  background: url("./images/header_img.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+header div,
+.logo {
+  position: absolute;
+  z-index: 1;
+}
+
+header div {
+  left: 2%;
+  bottom: 2%;
+  background: var(--red);
+  max-width: 300px;
+  height: 300px;
+  border: solid 1px var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+header p {
+  color: var(--white);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+  right: 2%;
+  bottom: 2%;
+}
+
+main {
+  max-width: 900px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+h1 {
+  color: var(--red);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+p:not(.lists p) {
+  margin: 20px 0;
+}
+
+.inner {
+  max-width: 600px;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.lists p {
+  padding: 0 30px;
+}
+
+.lists li {
+  display: flex;
+  align-items: center;
+}
+
+.lists li img {
+  display: inline;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+form {
+  margin: 40px 0;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+label:not(.form_check-label) {
+  margin: 10px 0;
+}
+
+input,
+select {
+  cursor: pointer;
+}
+
+input:not(.form_check-input) {
+  background: var(--white);
+  border: solid 1px var(--white);
+  padding: 0 10px;
+  height: 40px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row .form_group {
+  margin-right: 2%;
+}
+
+.inner_row {
+  display: flex;
+  flex-direction: row;
+}
+
+span {
+  display: block;
+  align-self: end;
+}
+
+.form_check {
+  display: flex;
+  gap: 6px;
+  margin: 40px 0 0;
+}
+
+.form_check-label a {
+  color: #00a2d8;
+}
+
+input[type="email"] {
+  max-width: 500px;
+}
+
+.select {
+  max-width: 100px;
+}
+
+select {
+  appearance: none;
+  background-color: var(--white);
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  line-height: inherit;
+  border: solid 1px var(--white);
+  padding: 0 10px;
+  height: 40px;
+}
+
+.form_name {
+  max-width: 250px;
+}
+
+.plz {
+  max-width: 160px;
+}
+
+.form_check-input {
+  align-self: start;
+}
+
+input[type="submit"] {
+  color: var(--white);
+  background: var(--DarkBlue);
+  font-weight: bold;
+  padding: 4px 12px;
+  width: fit-content;
+}
+
+.form_submit {
+  text-align: center;
+}
+
+.g-recaptcha {
+  display: grid;
+  place-content: center;
+  margin: 30px auto;
+}
+
+.warning {
+  color: red;
+  text-align: center;
+}
+
+#success_message {
+  background: var(--white);
+  padding: 3rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 400px;
+  box-shadow: 0px 10px 20px 7px #eae8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#success_message.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#success_message a {
+  text-decoration: underline;
+}
+
+#error_message {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#error_message.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 250px;
+  }
+
+  header div {
+    bottom: 5%;
+    max-width: 150px;
+    height: 150px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  .inner {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
